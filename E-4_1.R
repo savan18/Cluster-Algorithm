@@ -5,7 +5,7 @@ library(cluster)
 
 wages<-read.csv('http://inta.gatech.s3.amazonaws.com/wage2.csv')
 subwages <-wages[,c("wage","IQ","KWW","educ","age","married")]
-################ Modify ###########################################
+
 #using 3 cluster and Nstart 5 we get 79.1% accurecy
 cluster_model <- kmeans(subwages,3,nstart=5)
 print(cluster_model)
